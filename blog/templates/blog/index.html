@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+    <h1>Blog</h1>
+
+    <hr/>
+
+    {% for p in posts %}
+    <h2><a href="{{ p.get_absolute_url }}">제목: {{ p.title }}</a></h2>
+    <h4>작성일: {{ p.create_at }}</h4>
+    <h4>내용: {{ p.content }}</h4>
+    <hr/>
+    {% endfor %}
+
+</body>
+</html>
